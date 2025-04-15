@@ -6,8 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		72BAA0EF2DAE30B7005E7B23 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 72BAA0EE2DAE30B7005E7B23 /* .gitignore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72BAA0E92DAE300B005E7B23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72BAA0A82DACD719005E7B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72BAA0AF2DACD719005E7B23;
+			remoteInfo = BluePower;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		72BAA0B02DACD719005E7B23 /* BluePower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluePower.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72BAA0E32DAE300B005E7B23 /* BluePowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluePowerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72BAA0EE2DAE30B7005E7B23 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -26,12 +42,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72BAA0E02DAE300B005E7B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		72BAA0A72DACD719005E7B23 = {
 			isa = PBXGroup;
 			children = (
+				72BAA0EE2DAE30B7005E7B23 /* .gitignore */,
 				72BAA0B22DACD719005E7B23 /* BluePower */,
 				72BAA0B12DACD719005E7B23 /* Products */,
 			);
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				72BAA0B02DACD719005E7B23 /* BluePower.app */,
+				72BAA0E32DAE300B005E7B23 /* BluePowerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,26 @@
 			productReference = 72BAA0B02DACD719005E7B23 /* BluePower.app */;
 			productType = "com.apple.product-type.application";
 		};
+		72BAA0E22DAE300B005E7B23 /* BluePowerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72BAA0EB2DAE300B005E7B23 /* Build configuration list for PBXNativeTarget "BluePowerUITests" */;
+			buildPhases = (
+				72BAA0DF2DAE300B005E7B23 /* Sources */,
+				72BAA0E02DAE300B005E7B23 /* Frameworks */,
+				72BAA0E12DAE300B005E7B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72BAA0EA2DAE300B005E7B23 /* PBXTargetDependency */,
+			);
+			name = BluePowerUITests;
+			packageProductDependencies = (
+			);
+			productName = BluePowerUITests;
+			productReference = 72BAA0E32DAE300B005E7B23 /* BluePowerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +127,10 @@
 				TargetAttributes = {
 					72BAA0AF2DACD719005E7B23 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					72BAA0E22DAE300B005E7B23 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 72BAA0AF2DACD719005E7B23;
 					};
 				};
 			};
@@ -100,12 +149,21 @@
 			projectRoot = "";
 			targets = (
 				72BAA0AF2DACD719005E7B23 /* BluePower */,
+				72BAA0E22DAE300B005E7B23 /* BluePowerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		72BAA0AE2DACD719005E7B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72BAA0EF2DAE30B7005E7B23 /* .gitignore in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72BAA0E12DAE300B005E7B23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +180,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		72BAA0DF2DAE300B005E7B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72BAA0EA2DAE300B005E7B23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72BAA0AF2DACD719005E7B23 /* BluePower */;
+			targetProxy = 72BAA0E92DAE300B005E7B23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		72BAA0BC2DACD71B005E7B23 /* Debug */ = {
@@ -255,11 +328,14 @@
 				DEVELOPMENT_TEAM = QQN262X7KM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -267,9 +343,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Jun.BluePower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -284,11 +364,14 @@
 				DEVELOPMENT_TEAM = QQN262X7KM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,9 +379,47 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Jun.BluePower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		72BAA0EC2DAE300B005E7B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQN262X7KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jun.BluePowerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BluePower;
+			};
+			name = Debug;
+		};
+		72BAA0ED2DAE300B005E7B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQN262X7KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jun.BluePowerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BluePower;
 			};
 			name = Release;
 		};
@@ -319,6 +440,15 @@
 			buildConfigurations = (
 				72BAA0BF2DACD71B005E7B23 /* Debug */,
 				72BAA0C02DACD71B005E7B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72BAA0EB2DAE300B005E7B23 /* Build configuration list for PBXNativeTarget "BluePowerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72BAA0EC2DAE300B005E7B23 /* Debug */,
+				72BAA0ED2DAE300B005E7B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

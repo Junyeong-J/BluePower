@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum AppImage: String {
+    case main = "blueMainImage"
+}
