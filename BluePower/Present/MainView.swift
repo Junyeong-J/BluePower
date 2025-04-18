@@ -9,46 +9,54 @@ import SwiftUI
 
 struct MainView: View {
     
-    var body: some View {
-        VStack(spacing: 32) {
-            Spacer()
-            ImageView(image: .main)
-                .frame(width: Device.screenWidth * 0.8, height: Device.screenWidth * 0.8)
-            
-            Spacer()
-            
-            VStack(spacing: 16) {
-                CommonButton(
-                    icon: nil,
-                    backgroundColor: .main,
-                    text: "주변 기기 찾기",
-                    textColor: .white,
-                    symbolColor: nil,
-                    cornerRadius: 12,
-                    isEnabled: true,
-                    action: {
-                        
-                    }
-                )
-                
-                CommonButton(
-                    icon: nil,
-                    backgroundColor: .gray.opacity(0.2),
-                    text: "연결된 기기 보기",
-                    textColor: .black,
-                    symbolColor: nil,
-                    cornerRadius: 12,
-                    isEnabled: true,
-                    action: {
-                        
-                    }
-                )
-            }
-            .padding(.horizontal, 24)
-            .padding(.bottom, 40)
-        }
-    }
+    @StateObject private var viewModel = MainViewModel()
     
+    var body: some View {
+        VStack(spacing: viewModel.output.isSearching ? 16 : 32) {
+            Spacer()
+            
+            VStack(spacing: 12) {
+                if viewModel.output.isSearching {
+                    Text("검색 중...")
+                        .font(.headline)
+                        .foregroundStyle(.gray)
+                        .transition(.opacity)
+                }
+                
+                ImageView(image: .main)
+                    .frame(
+                        width: Device.screenWidth * (viewModel.output.isSearching ? 0.65 : 0.8),
+                        height: Device.screenWidth * (viewModel.output.isSearching ? 0.65 : 0.8)
+                    )
+                    .animation(.easeInOut,
+                               value: viewModel.output.isSearching)
+                
+                if viewModel.output.isSearching {
+                    HStack{
+                        Text("주변 기기")
+                            .font(.title)
+                            .foregroundStyle(.black)
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal, 20)
+                    
+                    Spacer()
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .animation(.easeInOut,
+                       value: viewModel.output.isSearching)
+            
+            Spacer()
+            
+            if !viewModel.output.isSearching {
+                MainUnderButtonsView(viewModel: viewModel)
+            }
+        }
+        .animation(.easeInOut,
+                   value: viewModel.output.isSearching)
+    }
 }
 
 #Preview {
