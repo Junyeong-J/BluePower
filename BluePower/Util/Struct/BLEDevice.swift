@@ -7,12 +7,8 @@
 
 import SwiftUI
 
-struct BLEDevice: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    BLEDevice()
+struct BLEDevice: Identifiable, Equatable {
+    let id: UUID = UUID()
+    let name: String
+    let isConnected: Bool
 }
