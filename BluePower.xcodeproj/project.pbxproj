@@ -11,7 +11,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		72BAA0E92DAE300B005E7B23 /* PBXContainerItemProxy */ = {
+		72BAA0FA2DAE3226005E7B23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72BAA0A82DACD719005E7B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72BAA0AF2DACD719005E7B23;
+			remoteInfo = BluePower;
+		};
+		72BAA12E2DB22E51005E7B23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 72BAA0A82DACD719005E7B23 /* Project object */;
 			proxyType = 1;
@@ -22,14 +29,25 @@
 
 /* Begin PBXFileReference section */
 		72BAA0B02DACD719005E7B23 /* BluePower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluePower.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		72BAA0E32DAE300B005E7B23 /* BluePowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluePowerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72BAA0EE2DAE30B7005E7B23 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		72BAA0F42DAE3226005E7B23 /* BluePowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluePowerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72BAA12A2DB22E50005E7B23 /* BluePowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluePowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		72BAA0B22DACD719005E7B23 /* BluePower */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BluePower;
+			sourceTree = "<group>";
+		};
+		72BAA0F52DAE3226005E7B23 /* BluePowerUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BluePowerUITests;
+			sourceTree = "<group>";
+		};
+		72BAA12B2DB22E51005E7B23 /* BluePowerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BluePowerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -42,7 +60,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72BAA0E02DAE300B005E7B23 /* Frameworks */ = {
+		72BAA0F12DAE3226005E7B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72BAA1272DB22E50005E7B23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +82,8 @@
 			children = (
 				72BAA0EE2DAE30B7005E7B23 /* .gitignore */,
 				72BAA0B22DACD719005E7B23 /* BluePower */,
+				72BAA0F52DAE3226005E7B23 /* BluePowerUITests */,
+				72BAA12B2DB22E51005E7B23 /* BluePowerTests */,
 				72BAA0B12DACD719005E7B23 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				72BAA0B02DACD719005E7B23 /* BluePower.app */,
-				72BAA0E32DAE300B005E7B23 /* BluePowerUITests.xctest */,
+				72BAA0F42DAE3226005E7B23 /* BluePowerUITests.xctest */,
+				72BAA12A2DB22E50005E7B23 /* BluePowerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,25 +123,51 @@
 			productReference = 72BAA0B02DACD719005E7B23 /* BluePower.app */;
 			productType = "com.apple.product-type.application";
 		};
-		72BAA0E22DAE300B005E7B23 /* BluePowerUITests */ = {
+		72BAA0F32DAE3226005E7B23 /* BluePowerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 72BAA0EB2DAE300B005E7B23 /* Build configuration list for PBXNativeTarget "BluePowerUITests" */;
+			buildConfigurationList = 72BAA0FC2DAE3226005E7B23 /* Build configuration list for PBXNativeTarget "BluePowerUITests" */;
 			buildPhases = (
-				72BAA0DF2DAE300B005E7B23 /* Sources */,
-				72BAA0E02DAE300B005E7B23 /* Frameworks */,
-				72BAA0E12DAE300B005E7B23 /* Resources */,
+				72BAA0F02DAE3226005E7B23 /* Sources */,
+				72BAA0F12DAE3226005E7B23 /* Frameworks */,
+				72BAA0F22DAE3226005E7B23 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				72BAA0EA2DAE300B005E7B23 /* PBXTargetDependency */,
+				72BAA0FB2DAE3226005E7B23 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				72BAA0F52DAE3226005E7B23 /* BluePowerUITests */,
 			);
 			name = BluePowerUITests;
 			packageProductDependencies = (
 			);
 			productName = BluePowerUITests;
-			productReference = 72BAA0E32DAE300B005E7B23 /* BluePowerUITests.xctest */;
+			productReference = 72BAA0F42DAE3226005E7B23 /* BluePowerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		72BAA1292DB22E50005E7B23 /* BluePowerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72BAA1302DB22E51005E7B23 /* Build configuration list for PBXNativeTarget "BluePowerTests" */;
+			buildPhases = (
+				72BAA1262DB22E50005E7B23 /* Sources */,
+				72BAA1272DB22E50005E7B23 /* Frameworks */,
+				72BAA1282DB22E50005E7B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72BAA12F2DB22E51005E7B23 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				72BAA12B2DB22E51005E7B23 /* BluePowerTests */,
+			);
+			name = BluePowerTests;
+			packageProductDependencies = (
+			);
+			productName = BluePowerTests;
+			productReference = 72BAA12A2DB22E50005E7B23 /* BluePowerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -128,7 +182,11 @@
 					72BAA0AF2DACD719005E7B23 = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					72BAA0E22DAE300B005E7B23 = {
+					72BAA0F32DAE3226005E7B23 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 72BAA0AF2DACD719005E7B23;
+					};
+					72BAA1292DB22E50005E7B23 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 72BAA0AF2DACD719005E7B23;
 					};
@@ -149,7 +207,8 @@
 			projectRoot = "";
 			targets = (
 				72BAA0AF2DACD719005E7B23 /* BluePower */,
-				72BAA0E22DAE300B005E7B23 /* BluePowerUITests */,
+				72BAA0F32DAE3226005E7B23 /* BluePowerUITests */,
+				72BAA1292DB22E50005E7B23 /* BluePowerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -163,7 +222,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72BAA0E12DAE300B005E7B23 /* Resources */ = {
+		72BAA0F22DAE3226005E7B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72BAA1282DB22E50005E7B23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -180,7 +246,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72BAA0DF2DAE300B005E7B23 /* Sources */ = {
+		72BAA0F02DAE3226005E7B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72BAA1262DB22E50005E7B23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,10 +263,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		72BAA0EA2DAE300B005E7B23 /* PBXTargetDependency */ = {
+		72BAA0FB2DAE3226005E7B23 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 72BAA0AF2DACD719005E7B23 /* BluePower */;
-			targetProxy = 72BAA0E92DAE300B005E7B23 /* PBXContainerItemProxy */;
+			targetProxy = 72BAA0FA2DAE3226005E7B23 /* PBXContainerItemProxy */;
+		};
+		72BAA12F2DB22E51005E7B23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72BAA0AF2DACD719005E7B23 /* BluePower */;
+			targetProxy = 72BAA12E2DB22E51005E7B23 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -389,7 +467,7 @@
 			};
 			name = Release;
 		};
-		72BAA0EC2DAE300B005E7B23 /* Debug */ = {
+		72BAA0FD2DAE3226005E7B23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -406,7 +484,7 @@
 			};
 			name = Debug;
 		};
-		72BAA0ED2DAE300B005E7B23 /* Release */ = {
+		72BAA0FE2DAE3226005E7B23 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -420,6 +498,42 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BluePower;
+			};
+			name = Release;
+		};
+		72BAA1312DB22E51005E7B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQN262X7KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jun.BluePowerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluePower.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BluePower";
+			};
+			name = Debug;
+		};
+		72BAA1322DB22E51005E7B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQN262X7KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jun.BluePowerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluePower.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BluePower";
 			};
 			name = Release;
 		};
@@ -444,11 +558,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		72BAA0EB2DAE300B005E7B23 /* Build configuration list for PBXNativeTarget "BluePowerUITests" */ = {
+		72BAA0FC2DAE3226005E7B23 /* Build configuration list for PBXNativeTarget "BluePowerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				72BAA0EC2DAE300B005E7B23 /* Debug */,
-				72BAA0ED2DAE300B005E7B23 /* Release */,
+				72BAA0FD2DAE3226005E7B23 /* Debug */,
+				72BAA0FE2DAE3226005E7B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72BAA1302DB22E51005E7B23 /* Build configuration list for PBXNativeTarget "BluePowerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72BAA1312DB22E51005E7B23 /* Debug */,
+				72BAA1322DB22E51005E7B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -6,11 +6,21 @@
 //
 
 import Testing
+@testable import BluePower
 
-struct BluePowerTests {
+struct MainViewModelTests {
 
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    @Test
+    func testIsSearchingToggles() async throws {
+        let viewModel = MainViewModel()
+
+        // 초기 상태 확인
+        #expect(viewModel.output.isSearching == false)
+
+        // 액션 발생
+        viewModel.action(.isSearching)
+
+        // 상태 변경 확인
+        #expect(viewModel.output.isSearching == true)
     }
-
 }
