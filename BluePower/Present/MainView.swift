@@ -41,6 +41,9 @@ struct MainView: View {
                     }
                     .padding(.horizontal, 20)
                     
+                    BluetoothDeviceListView(viewModel: viewModel)
+                        .transition(.opacity)
+                    
                     Spacer()
                 }
             }
