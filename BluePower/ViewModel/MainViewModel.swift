@@ -27,16 +27,11 @@ final class MainViewModel: ViewModelType {
     }
     
     private func setupBindings() {
-        input.findButtonTapped
-            .sink { [weak self] _ in
-                self?.output.isSearching = true
-            }
-            .store(in: &cancellables)
+        
     }
 }
 
 // MARK: - Input & Output
-
 extension MainViewModel {
     
     struct Input {
@@ -45,6 +40,7 @@ extension MainViewModel {
     
     struct Output {
         var isSearching: Bool = false
+        var devices: [BLEDevice] = []
     }
     
     func transform() {
@@ -63,7 +59,13 @@ extension MainViewModel {
     func action(_ action: Action) {
         switch action {
         case .isSearching:
-            input.findButtonTapped.send(())
+            Task { @MainActor in
+                output.isSearching = true
+                output.devices = [
+                    BLEDevice(name: "AirPods Pro", isConnected: true),
+                    BLEDevice(name: "Bluetooth Mouse", isConnected: false)
+                ]
+            }
         }
     }
     
